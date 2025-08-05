@@ -1,0 +1,1 @@
+Clemmys guttata Genome Assembly
