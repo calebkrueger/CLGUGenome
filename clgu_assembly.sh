@@ -31,8 +31,12 @@ seqkit sort --by-length --reverse ./ctm_a.fa | seqkit replace --pattern '.+' --r
 # 3 - The following analyses and assessments were conducted on the Galaxy web platform (usegalaxy.org)
 # Default settings used unless otherwise specified
 # 3.1 - QUAST-LG (v5.2.0)
-# 3.2 - BUSCO (v5.5.0 w/ vertebrata_odb10)
-# 3.3 - meryl (v1.3; k=20) followed by GenomeScope2.0 (v2.0.1) and merqury (v1.3)
+# 3.2 - meryl (v1.3; k=20) followed by GenomeScope2.0 (v2.0.1) and merqury (v1.3)
+
+# 3.3 - BUSCO
+
+busco -i ./sorted_ctm_p.fa -m genome -l sauropsida_odb10 -c 32 --miniprot
+busco -i ./sorted_ctm_a.fa -m genome -l sauropsida_odb10 -c 32 --miniprot
 
 # 3.4 - Screen for contamination using FCS-GX
 
