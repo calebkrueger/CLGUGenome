@@ -46,11 +46,11 @@ GXDB_LOC=/path/to/fcs_db
 python3 ./fcs.py screen genome --fasta ./sorted_ctm_p.fa --out-dir ./gx_out/ --gx-db "$GXDB_LOC" --tax-id 85608
 python3 ./fcs.py screen genome --fasta ./sorted_ctm_a.fa --out-dir ./gx_out/ --gx-db "$GXDB_LOC" --tax-id 85608
 
-# 4.1 - Visualize synteny between current assembly and assembly released by CGEn (Accession GCA_040208395.1) using JupiterPlot
+# 4.1 - Visualize synteny between current assembly and assembly released by CGEn (Accession GCA_040208395.2) using JupiterPlot
 
-jupiter name=clgu ref=./sorted_ctm_p.fa fa=can_clgu_p.fna t=8 ng=0 m=1000000
+jupiter name=clgu ref=./sorted_ctm_p.fa fa=can_clgu_p.fna t=8 ng=200 m=1000000 gScaff=1 minBundleSize=100000
 
-# 4.2 - Estimate demographic history of current assembly and assembly released by CGEn (Accession GCA_040208395.1) using PSMC
+# 4.2 - Estimate demographic history of current assembly and assembly released by CGEn (Accession GCA_040208395.2) using PSMC
 
 prefetch SRR27950426 --max-size 35g
 fasterq-dump SRR27950426
